@@ -13,6 +13,8 @@ const projectSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    projectDomains:[String],
+    projectInstitute:{type:String},
     projectContributers: [String],
     projectMentors: [String],
     projectDesc:{
