@@ -13,5 +13,6 @@ app.use(express.urlencoded({extended: true}));
 
 app.use(cookieParser());
 
+app.use('/api', )
 app.get('/', (req, res) => res.send('Server is ready'))
 app.listen(port, () => console.log(`Server started on port: ${port}`));
