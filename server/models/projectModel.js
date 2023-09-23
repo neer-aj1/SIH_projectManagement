@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const projectSchema = mongoose.Schema({
+    owner: {
+        type: String,
+        required: true,
+    },
     projectName: {
         type: String,
         required: true,
@@ -9,22 +13,8 @@ const projectSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    projectContributers: [
-        {
-            contributerName:
-            {
-                type: String
-            }
-        }
-    ],
-    projectMentors: [
-        {
-            mentorName:
-            {
-                type: String
-            }
-        }
-    ],
+    projectContributers: [String],
+    projectMentors: [String],
     projectDesc:{
         type: String,
         required: true,
