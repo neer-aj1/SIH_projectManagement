@@ -73,4 +73,17 @@ const logout = asyncHandler(
     }
 );
 
-export {register, login, logout};
+const allUsers = asyncHandler(async (req, res) => {
+    const keyword = req.query.search
+      ? {
+          $or: [
+            { username: { $regex: req.query.search, $options: "i" } },
+            { email: { $regex: req.query.search, $options: "i" } },
+          ],
+        }
+      : {};
+    const users = await User.find(keyword).find({username:{$ne: req.user.username}});
+    res.send(users);
+  });
+
+export {register, login, logout, allUsers};

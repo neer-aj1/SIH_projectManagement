@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/userRoutes.js';
 import projectRoute from './routes/projectRoute.js'
 import conn from "./database/databaseConnection.js";
+import chatRoutes from './routes/chatRoute.js';
+import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 
@@ -16,6 +18,9 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/api', userRoutes);
 app.use('/project', projectRoute);
+app.use('/api/chat', chatRoutes);
+app.use(notFound);
+app.use(errorHandler)
 conn();
 app.use(cookieParser());
 
