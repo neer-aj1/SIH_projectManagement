@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --small: "Open Sans";
+  
+    /* font sizes */
+    --small-size: 12px;
+    --primarytext-size: 14px;
+  
+    /* Colors */
+    --schemas-jnt-primary-dark-color: #00227b;
+    --palette-jnt-white-color: #fff;
+    --text-jnt-primary-text-light-color: #828282;
+    --schemas-jnt-primary-color: #3949ab;
+    --control-jnt-control-border-color: #d0d0d0;
+    --text-jnt-primary-text-dark-color: #343434;
+  
+    /* Gaps */
+    --gap-base: 16px;
+    --gap-5xs: 8px;
+    --gap-9xs: 4px;
+  
+    /* Paddings */
+    --padding-13xl: 32px;
+    --padding-2xs: 11px;
+    --padding-9xs: 4px;
+  
+    /* Border radiuses */
+    --br-5xl: 24px;
+    --br-21xl: 40px;
+    --br-9xs: 4px;
+    --br-5xs: 8px;
+  }
+  
