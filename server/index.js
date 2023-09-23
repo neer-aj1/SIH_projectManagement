@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import dotenv from 'dotenv';
 import userRoutes from './routes/userRoutes.js';
+import conn from "./database/databaseConnection.js";
 
 dotenv.config();
 
@@ -13,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.use('/api', userRoutes);
-
+conn();
 app.use(cookieParser());
 
 app.get('/', (req, res) => res.send('Server is ready'))

@@ -5,7 +5,7 @@ import generateToken from "../utils/tokenGenerator.js";
 // post method to register user
 const register = asyncHandler( 
     async(req, res) => {
-    const {fname, lname, email, password, phoneNumber, } = req.body;
+    const {fname, lname, email, password, phoneNumber, userType,domain,institute,username} = req.body;
     const alreadyRegisterd = await User.findOne({email});
     if(alreadyRegisterd){
         res.status(400);
