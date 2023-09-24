@@ -1,4 +1,5 @@
 import './App.css'
+import Projects from './components/projects/Projects'
 import Homepage from './components/homepage/Homepage';
 import UserChats from './components/userChats/UserChats';
 import Login from './components/login/Login'
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={User ? <Navigate to={"/"} /> : <Login />} />
         <Route path="/register" element={User ? <Navigate to={"/"} /> : <Register />} />
         <Route path="/chat" element={User ? <UserChats/> : <Navigate to={"/"} />} />
+        <Route path="/project" element={User ? <Projects/> : <Navigate to={"/"} />} />
       </Routes>
     </Router>
   )
