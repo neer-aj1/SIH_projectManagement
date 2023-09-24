@@ -5,12 +5,13 @@ const generateToken = (res, userId) => {
         expiresIn: '2d'
     });
 
-    res.cookie('jwt', token, {
-        httpOnly : true ,
-        maxAge   : 2*24*60*60*1000,
-        sameSite: 'strict',
-        secure : process.env.NODE_ENV !== 'development'
-    });
+    // res.cookie('jwt', token, {
+    //     httpOnly : true ,
+    //     maxAge   : 2*24*60*60*1000,
+    //     sameSite: 'strict',
+    //     secure : process.env.NODE_ENV !== 'development'
+    // });
+    return token;
 };
 
 export default generateToken;

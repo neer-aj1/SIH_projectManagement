@@ -48,10 +48,18 @@ const login = asyncHandler(
             throw new Error("Invalid")
         }
         if(user && matchedPasswords){
-            generateToken(res, user._id);
+            let token = generateToken(res, user._id);
+            res.cookie('jwt', token, {
+                httpOnly : true ,
+                maxAge   : 2*24*60*60*1000,
+                sameSite: 'strict',
+                secure : process.env.NODE_ENV !== 'development'
+            });
             res.status(201).json({
                 name: user.fname,
                 username: user.username,
+                token: token,
+                id: user._id,
             });
         }
         else{
