@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-material-icons: "Material Icons";
+    --subtitle-02: Inter;
+  
+    /* font sizes */
+    --font-size-mini: 15px;
+    --subtitle-02-size: 20px;
+  
+    /* Colors */
+    --yellow: #fff;
+    --color-lightsteelblue: #abb2e4;
+    --color-gray-100: #121217;
+    --color-gray-200: rgba(255, 255, 255, 0.8);
+  
+    /* Paddings */
+    --padding-5xl: 24px;
+  
+    /* Border radiuses */
+    --br-81xl: 100px;
+  }
+  
